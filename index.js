@@ -19,9 +19,20 @@ app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   next();
 });
+
 // Connect to MongoDB
 mongoose.connect('mongodb://tomek:tomek1@ds039088.mongolab.com:39088/testdb');
 mongoose.connection.once('open', function() {
+
+  // Load the models
+  app.models = require('./models/index');
+
+  // Load routes file
+  var routes = require('./routes');
+  _.each(routes, function(controller, route) {
+    app.use(route, controller(app, route));
+  });
+
   console.log('Listening on port 3000...');
   app.listen(3000);
 });
