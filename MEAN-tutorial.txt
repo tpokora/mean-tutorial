@@ -1,0 +1,4 @@
+https://www.youtube.com/watch?v=OhPFgqHz68o
+
+36:05 - AngularJS
+47.09 - connecting AngularJS with Node.js REST API
