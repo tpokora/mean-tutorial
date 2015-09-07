@@ -10,9 +10,13 @@
  */
 angular
   .module('clientApp', [
-    'ngRoute'
+    'ngRoute',
+    'restangular'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, RestangularProvider) {
+
+    RestangularProvider.setBaseUrl('http://localhost:3000');
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -32,4 +36,15 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .factory('MovieRestangular', function(Restangular) {
+    return Restangular.withConfig(function(RestangularConfigurer) {
+      // setting JSON _id field to id
+      RestangularConfigurer.setRestangularFields({
+        id: '_id'
+      })
+    })
+  })
+  .factory('Movie', function(MovieRestangular) {
+    return MovieRestangular.service('movie');
   });
