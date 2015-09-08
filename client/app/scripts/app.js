@@ -38,7 +38,7 @@ angular
         controller: 'MovieAddCtrl',
         controllerAs: 'movieAdd'
       })
-      .when('/create/:id', {
+      .when('/movie/:id', {
         templateUrl: 'views/movie-view.html',
         controller: 'MovieViewCtrl',
         controllerAs: 'movieView'
