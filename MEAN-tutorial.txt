@@ -3,3 +3,33 @@ https://www.youtube.com/watch?v=OhPFgqHz68o
 36:05 - AngularJS
 47.09 - connecting AngularJS with Node.js REST API
 54:30 - CRUD
+
+Installed modules:
+- Ruby
+- Homebrew
+- Node.js (brew install node)
+- GruntCLI (npm install -g grunt-cli)
+- Bower (npm install -g bower)
+- Compass (gem install compass)
+- MongoDB (in this case used MongoLab)
+
+Node.js:
+- Express (npm install --save express)
+- Mongoose (npm install --save mongoose)
+- ResourceJS (npm install --save resourcejs)
+- method-override (npm install --save method-override)
+- body-parser (npm install --save body-parser)
+- lodash (npm install --save lodash)
+
+
+Angular:
+- yeoman (npm install -g yo)
+- generator-angular (npm install -g generator-angular)
+- angular (yo angular)
+
+Angular routes:
+yo angular:route name
+yo angular:route name-of-view --uri=URL
+
+Bower:
+- restangular (bower install --save restangular)
