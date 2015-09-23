@@ -17,6 +17,7 @@ Node.js:
 - Express (npm install --save express)
 - Mongoose (npm install --save mongoose)
 - ResourceJS (npm install --save resourcejs)
+- node-restful (npm install --save node-restful)
 - method-override (npm install --save method-override)
 - body-parser (npm install --save body-parser)
 - lodash (npm install --save lodash)
